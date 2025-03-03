@@ -1,7 +1,10 @@
 "use client"; // Required for Client Components in Next.js App Router
 
 import { useRouter } from "next/navigation"; // Correct import for App Router
+import Image from "next/image"; // Ensure Image is imported from next/image
+import Link from "next/link"; // Ensure Link is imported from next/link
 import styles from "./Dashboard.module.css";
+import Logo from "./../../public/apple-touch-icon.png"; // Ensure correct path
 
 export default function Dashboard() {
   const router = useRouter(); // Now it works fine
@@ -10,7 +13,13 @@ export default function Dashboard() {
     <div className={styles.dashboardContainer}>
       {/* Sidebar */}
       <aside className={styles.sidebar}>
-        <h2>TBD</h2>
+        <div className={styles.logoContainer}>
+          <Link href="/" passHref>
+            <Image className={styles.logo} src={Logo} alt="tree" width={30} height={30} />
+          </Link>
+          <h2 className={styles.logoText}>TBD</h2>
+        </div>
+
         <ul>
           <li className={styles.active}>Dashboard</li>
           <li onClick={() => router.push("/notifications")}>

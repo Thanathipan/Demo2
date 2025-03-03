@@ -9,13 +9,30 @@
   width: 250px;
   background: #f8f9fa;
   padding: 20px;
+  border-radius: 30px;
 }
 
-.sidebar h2 {
+/* Logo Container */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Spacing between logo and text */
+  margin-bottom: 15px;
+}
+
+.logo {
+  width: 30px; 
+  height: 30px;
+}
+
+.logoText {
   color: #1e7e34;
-  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
 }
 
+/* Sidebar Navigation */
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -25,6 +42,7 @@
   padding: 15px;
   cursor: pointer;
   transition: background 0.3s ease;
+  border-radius: 20px;
 }
 
 .sidebar ul li:hover {
@@ -36,6 +54,7 @@
   color: white;
 }
 
+/* Badge Style */
 .badge {
   background: red;
   color: white;
